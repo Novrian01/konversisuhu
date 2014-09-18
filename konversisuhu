@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main(){
+
+ int pil_suhu;
+ float celcius, reamur, far, ;
+
+ printf("Konversi Suhu\n\nYang Akan Anda Konversi Adalah:\n1. Celsius\n2. Reamur\n3. Fahrenheit\nPillihan Anda : ");
+ scanf("%i", &pil_suhu);
+ printf("\n\n");
+
+ switch (pil_suhu)
+ {
+  case 1:
+   printf("Suhu Dalam Celsius : ");
+   scanf("%f", &celcius);
+
+   reamur = celcius * 0.8;
+   far = celcius * 1.8 + 32;
+
+   printf("Suhu Reamur : %f\n", reamur);
+   printf("Suhu Fahrenheit : %f\n", far);
+
+   break;
+
+  case 2:
+   printf("Suhu Dalam Reamur : ");
+   scanf("%f", &reamur);
+
+   celcius = reamur / 0.8;
+   far = reamur * 2.25 + 32;
+
+   printf("Suhu Celcius : %f\n", celcius);
+   printf("Suhu Fahrenheit : %f\n", far);
+
+   break;
+
+  case 3:
+   printf("Suhu Dalam Fahrenheit : ");
+   scanf("%f", &far);
+
+   celcius = (far - 32) / 0.8;
+   reamur = (far - 32) / 2,25;
+
+   printf("Suhu Celcius : %f\n", celcius);
+   printf("Suhu Reamur : %f\n", reamur);
+
+   break;
+  default:
+   printf("Pilihan Salah");
+   break;
+ }
+
+ return 0;
+}
